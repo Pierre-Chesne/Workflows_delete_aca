@@ -8,4 +8,4 @@ jobs:
     steps:
       - name: Test
         run: |
-          echo "delete fdp"
+          echo ${{ toJSON(github.event.action) }}
