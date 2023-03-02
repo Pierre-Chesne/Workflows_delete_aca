@@ -1,0 +1,11 @@
+name: Delete
+on:
+  repository_dispatch:
+
+jobs:
+  Deploy_Environnment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test
+        run: |
+          echo "delete fdp"
