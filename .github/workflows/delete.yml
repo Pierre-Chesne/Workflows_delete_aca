@@ -6,6 +6,12 @@ jobs:
   Delete_Environnment:
     runs-on: ubuntu-latest
     steps:
-      - name: Test
+      - name: Client Number
         run: |
           echo ${{ toJSON(github.event.action) }}
+          
+
+      - name: Login Azure
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
